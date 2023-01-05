@@ -1,0 +1,306 @@
+@font-face {
+    font-family: "Mukta";
+    src: url(./assets/fonts/Mukta-Medium.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(48, 48, 48);
+    max-width: 1200px;
+    font-family: 'Mukta', sans-serif;
+    max-width: 1000px;
+    min-width: 350px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header{
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 33% 1fr;
+    grid-template-areas: 
+    "it1 it2"
+    "it3 it2";
+    background: white;
+    margin-top: 20px;
+    min-height: 310px;
+}
+
+header .name{
+    grid-area: it1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header .name .nom{
+    color: rgb(7 8 54);
+}
+
+header .name .emploi{
+    color: rgb(27 168 235);
+}
+
+header .profil{
+    grid-area: it3;
+    padding-left: 20px;
+    line-height: 1.5rem;
+    padding-top: 20px;
+}
+
+header .photoCv{
+    grid-area: it2;
+    background: url(./assets/img/flophotocv.jpg) center/cover;
+}
+
+header .profil{
+    background: rgb(7 8 54);
+    color: white;
+    height: 100%;
+}
+
+h2{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    height: 24px;
+}
+
+span{
+    text-decoration: underline;
+}
+
+
+/*MAIN*/
+
+hr{
+    background: rgb(7 8 54);
+    height: 1px;
+    border: none;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    background: white;
+    color: rgb(7 8 54);
+}
+
+.main .mainleft{
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+
+
+.main .mainleft h4{
+    padding-left: 40px;
+    color: rgb(27 168 235);
+}
+
+.description{
+    padding-left: 40px;
+    line-height: 1.3rem;
+}
+
+.main .mainright{
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgb(27 168 235);
+}
+
+.main .mainright .contact .sectionContact{
+   display: grid;
+   grid-template-columns: 15% 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   grid-template-areas: 
+   "it1 it2"
+   "it3 it4"
+   "it5 it6"
+   "it7 it8";
+   align-items: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.main .mainright .contact .sectionContact .contact1{
+    grid-area: it1;
+ }
+
+ .main .mainright .contact .sectionContact .contact2{
+    grid-area: it2;
+ }
+
+ .main .mainright .contact .sectionContact .contact3{
+    grid-area: it3;
+ }
+
+ .main .mainright .contact .sectionContact .contact4{
+    grid-area: it4;
+ }
+
+ .main .mainright .contact .sectionContact .contact5{
+    grid-area: it5;
+ }
+
+ .main .mainright .contact .sectionContact .contact6{
+    grid-area: it6;
+ }
+
+ .main .mainright .contact .sectionContact .contact7{
+    grid-area: it7;
+ }
+
+ .main .mainright .contact .sectionContact .contact8{
+    grid-area: it8;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "it1 it2"
+    "it3 it4"
+    "it5 it6"
+    "it7 it8"
+    "it9 it10";
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir1{
+    grid-area: it1;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir2{
+    grid-area: it2;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir3{
+    grid-area: it3;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir4{
+    grid-area: it4;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir5{
+    grid-area: it5;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir6{
+    grid-area: it6;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir7{
+    grid-area: it7;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir8{
+    grid-area: it8;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir9{
+    grid-area: it9;
+ }
+
+ .main .mainright .savoiretre .sectionSavoir .savoir10{
+    grid-area: it10;
+ }
+
+
+
+ /*RESPONSIVE*/
+
+ @media screen and (max-width: 1000px){
+   header{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 33% 1fr;
+      grid-template-areas: 
+      "it1 it1"
+      "it3 it3";
+      margin-top: 20px;
+      min-height: 310px;
+  }
+ }
+
+ @media screen and (max-width: 800px){
+  .main{
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+
+  .main .mainright{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas: 
+   "itt1 itt2"
+   "itt3 itt4";
+}
+
+.main .mainright .contact{
+   grid-area: itt1;
+}
+
+.main .mainright .formation{
+   grid-area: itt2;
+}
+
+.main .mainright .savoiretre{
+   grid-area: itt3;
+}
+
+.main .mainright .references{
+   grid-area: itt4;
+}
+  
+.main .mainright .contact .sectionContact{
+   grid-template-columns: 10% 1fr;
+}
+
+.main .mainright .savoiretre .sectionSavoir{
+   grid-template-columns: 10% 1fr;
+}
+
+}
+
+@media screen and (max-width: 500px){
+   header{
+      margin-top: 0;
+   }
+
+   header .name{
+      font-size: 1.2rem;
+   }
+
+   header .profil .layus{
+      font-size: .8rem;
+   }
+
+   .main{
+      margin-top: 30px;
+   }
+
+   .main .mainright{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+      "itt1"
+      "itt2"
+      "itt3"
+      "itt4";
+   }
+
+}
